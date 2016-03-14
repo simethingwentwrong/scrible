@@ -1,3 +1,5 @@
+package scribble;
+
 import java.awt.Color;
 import java.util.Random;
 
@@ -84,5 +86,17 @@ public class DrawDemo
     public void clear()
     {
         myCanvas.erase();
+    }
+    
+    public void drawTriangle(int xPos, int yPos)
+    {
+        Pen pen = new Pen(xPos, yPos, myCanvas);
+        pen.setColor(Color.GREEN);
+
+        pen.move(100);
+        pen.turn(120);
+        pen.move(100);
+        pen.turn(120);
+        pen.move(100);
     }
 }
