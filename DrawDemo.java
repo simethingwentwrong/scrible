@@ -94,9 +94,46 @@ public class DrawDemo
         pen.setColor(Color.GREEN);
 
         pen.move(100);
-        pen.turn(120);
+        pen.turn(-120);
         pen.move(100);
-        pen.turn(120);
+        pen.turn(-120);
         pen.move(100);
+    }
+    
+    public void drawPentagon()
+    {
+        Pen pen = new Pen(150, 200, myCanvas);
+        pen.setColor(Color.GREEN);
+        for(int i= 0; i < 5; i++){
+        pen.move(100);
+        pen.turn(-360/5);
+       }
+        
+    }
+    
+    public void drawPolygon(int n)
+    {
+        Pen pen = new Pen(150, 200, myCanvas);
+        if (n >= 3){
+        for(int i= 0; i < n; i++){
+        pen.move(30);
+        pen.turn(-360/n);
+       }
+      }
+      else{
+          System.out.println("No has dado suficientes lados para crear un poligono");
+        }
+        
+    }
+    
+    public void drawSpiral()
+    {
+        Pen pen = new Pen(125, 125, myCanvas);
+        pen.setColor(Color.BLUE);
+        for(int i= 1; i < 100; i++){
+        pen.move(i * 2);
+        pen.turn(90);
+       }
+        
     }
 }
